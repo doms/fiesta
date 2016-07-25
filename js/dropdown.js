@@ -32,6 +32,7 @@ playlistX = 0;
 
 })();
 
+// add song to playlist
 fileLoaded = function(e) {
 	pushPlaylist(e.target.result);
 };
@@ -52,7 +53,7 @@ function pushPlaylist(file, meta) {
 	  	var trackName = meta.name.replace('.mp3', '');
 	   	
 	   	// we don't want too long of a track name....
-	   	cutTrackName = trackName.substring(0, 40);
+	   	cutTrackName = trackName.substring(0, 25);
 
 	    // ...so we'll trim the name and add generic dots for the suffix
 	    if(cutTrackName !== trackName) {
@@ -80,7 +81,7 @@ function pushPlaylist(file, meta) {
 
 		playlistX++;
 
-		$('.drop-message').hide();
+		$('.drop-message').hide(); // hides the "Drag & drop message" when first song has been added
 	});
 }
 

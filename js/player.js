@@ -1,7 +1,7 @@
 dancer = new Dancer();
 volume = 0.5;
-ctx = fft.getContext( '2d' );
-fft = document.getElementById( 'fft' );
+ctx = fft.getContext('2d');
+fft = document.getElementById('fft');
 updateSlider = true;
 
 (function () {
@@ -10,16 +10,16 @@ updateSlider = true;
   }
 
   Dancer.setOptions({
-    flashSWF : '../../lib/soundmanager2.swf',
-    flashJS  : '../../lib/soundmanager2.js'
+    flashSWF: '../../lib/soundmanager2.swf',
+    flashJS: '../../lib/soundmanager2.js'
   });
 
-
+  // controls the seeker (how long the song has been playing and what point it's at in the song)
   $('.seeker').slider({
-    start: function( event, ui ) {
+    start: function(event, ui) {
       updateSlider = false;
     },
-    stop: function( event, ui ) {
+    stop: function(event, ui) {
       updateSlider = true;
       var seekTo = (ui.value / 100) * dancer.audio.duration;
 
@@ -29,9 +29,10 @@ updateSlider = true;
     }
   });
 
+  // controls the volume slider
   $('.volume').slider({
     value: 50,
-    slide: function( event, ui ) {
+    slide: function(event, ui) {
       volume = ui.value / 100;
 
       if(dancer.audio) {
@@ -40,6 +41,7 @@ updateSlider = true;
     }
   });
 
+  // 
   $('.button-stop').click(function() {
     dancer.pause();
     setStatusPaused();
@@ -102,10 +104,10 @@ function playTrack(track) {
 
   kick = dancer.createKick({
     onKick: function () {
-      ctx.fillStyle = '#6441A5';
+      ctx.fillStyle = '#3B87F9';
     },
     offKick: function () {
-      ctx.fillStyle = '#6441A5';
+      ctx.fillStyle = '#3B87F9';
     }
   }).on();
 
@@ -125,7 +127,7 @@ function setStatusPlaying() {
     $('body').addClass('is-playing');
   }
 
-  $('.drop-message').hide();
+  $('.drop-message').hide(); // hides "drag & drop" message 
 }
 
 function setStatusPaused() {

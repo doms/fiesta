@@ -1,13 +1,12 @@
-@import 'https://fonts.googleapis.com/css?family=Audiowide|Lobster|Montserrat+Alternates|Sansita+One|Sonsie+One';
-
+@import 'https://fonts.googleapis.com/css?family=Audiowide|Lobster|Carrois+Gothic+SC|Sansita+One|Sonsie+One';
 
 body {
+    font-family: 'Audiowide', arial, sans-serif;
     margin: 0;
     padding: 0;
     font-family: Arial;
     overflow: hidden;
     background-color: #000;
-    font-family: 'League Gothic', arial, sans-serif;
 }
 
 #lobster {
@@ -111,6 +110,7 @@ div ul li {
     background-color: #ccc;
     border-radius: 2px;
 }
+
 .playing-arrow {
     position: absolute;
     visibility: hidden;
@@ -121,6 +121,7 @@ div ul li {
 .playing-arrow img {
     position: relative;
     right:15px;
+    background-image: url(../images/playbutton.png);
 }
 .track {
 
@@ -130,7 +131,8 @@ div ul li {
     color: grey;
 }
 #track-container {
-    font-family: 'Lobster', cursive;
+    font-family: 'Audiowide', arial, sans-serif;
+    font-size: 12px;
     color: grey;
     max-height: 65%;
     overflow-y: auto;
@@ -141,7 +143,7 @@ div ul li {
     width: 300px;
     margin: 5px auto;
     font-size: 20px;
-    text-shadow: 0 0 3px purple;
+    text-shadow: 0 0 3px black;
     color: white;
     font-weight: bold;
 }
@@ -162,7 +164,7 @@ div ul li {
     position: absolute;
     border: none !important;
     background: #3B87F9 !important;
-    left: 140px;
+    left: 195px;
     bottom: 8px;
 }
 .volume .ui-slider-handle {
@@ -175,7 +177,7 @@ div ul li {
 }
 #render {
     background-color: #000;
-    background-image: url('../img/GlitchIcon_white.png');
+    background-image: url('../images/GlitchIcon_white.png');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 200px 200px;
@@ -197,14 +199,15 @@ div ul li {
 }
 .drop-message {
     font-family: 'Lobster', cursive;
-    color: grey;
+    color: #EEEEEE;
+    text-shadow: yellow 2px 5px;
     font-size: 23px;
     font-weight: bold;
-    left: 50%;
+    left: 52%;
     margin-left: -125px;
     position: absolute;
     text-shadow: 0 0 3px purple;
-    top: 85%;
+    top: 70%;
     width: 255px;
 }
 .version {
@@ -235,7 +238,7 @@ div ul li {
 }
 #settings {
     font-family: "Audiowide";
-    color: grey;
+    color: #69A5FF;
     position: absolute;
     bottom: 65px;
     margin-left: 10px;
@@ -245,9 +248,9 @@ div ul li {
     font-size: 12px;
 }
 #info {
-    font-family: 'Sonsie One', arial, sans-serif;
+    font-family: 'Audiowide', arial, sans-serif;
     padding-left: 10px;
-    width: 75%;
+    width: 6%; /* 75% */
     position: fixed;
     top: 0;
     height: 52px;
@@ -258,8 +261,8 @@ div ul li {
 #info h1 {
     margin: 6px 0px 0px -2px;
     float: left;
-    font-size: 40px;
-    color: #6441A5;
+    font-size: 35px;
+    color: white;
 }
 #info h2 {
     margin: 14px 0 0 5px;
@@ -309,7 +312,7 @@ div ul li {
     text-decoration: none;
 }
 
-#loading p{
+#loading p {
     color: #fff;
     font-size: 18px;
 }

@@ -1,15 +1,16 @@
 /*
- * Emote FFT plugin for dancer.js
+ * FFT plugin for dancer.js (specifically for emotes)
  *
  * Usage of frequencies being 2px with 1px spacing:
  *
  * var dancer = new Dancer('song.ogg'),
  *     canvas = document.getElementById('fftcanvas');
- * dancer.fft( canvas, { width: 2, spacing: 1 });
+ * 
+ * dancer.fft(canvas, {width: 2, spacing: 1});
  */
 
 (function() {
-  Dancer.addPlugin( 'fft', function(canvasEl, options) {
+  Dancer.addPlugin('fft', function(canvasEl, options) {
     options = options || {};
     var
       ctx     = canvasEl.getContext('2d'),
@@ -27,19 +28,58 @@
     ctx.fillStyle = options.fillStyle || "white";
 
     var imageObj = new Image();
-    imageObj.src = '../img/pogchamp.png'; // PogChamp
+    // imageObj.src = '../images/twitch/residentsleeper.png'; // start at no hype
+
+
 
     this.bind('update', function() {
       var spectrum = this.getSpectrum();
-      ctx.clearRect( 0, 0, w, h );
+      ctx.clearRect(0, 0, w, h);
+
 
       for (var i = 0, l = spectrum.length; i < l && i < count; i++) {
         if ($('input[name="settings-bars"]').prop('checked')) {
-          ctx.fillRect(i * (spacing + width + widthMultiplier ), h, width + 10, -spectrum[ i ] * h * heightMultiplier);
+          ctx.fillRect(i * (spacing + width + widthMultiplier), h, width + 10, -spectrum[i] * h * heightMultiplier);
         }
         
-        if($('input[name="settings-emotes"]').prop('checked')) {
-          ctx.drawImage(imageObj, i * (spacing + width + widthMultiplier) - 2,  -spectrum[ i ] * h * heightMultiplier + h - emoteOffsetH, 18, 18);
+        // Twitch mode
+        if($('input[name="settings-twitch"]').prop('checked')) {
+
+          // TODO: we don't want the twitch & bttv emotes overlapping, so we turn off the bttv emotes when twitch mode is selected.
+
+          // TODO: find proper way to check for "kick" height
+          if () {
+            imageObj.src = '../images/twitch/pogchamp.png';
+            ctx.drawImage(imageObj, i * (spacing + width + widthMultiplier) - 2,  -spectrum[i] * h * heightMultiplier + h - emoteOffsetH, 18, 18);
+          } else if () {
+            imageObj.src = '../images/twitch/seemsgood.png';
+            ctx.drawImage(imageObj, i * (spacing + width + widthMultiplier) - 2,  -spectrum[i] * h * heightMultiplier + h - emoteOffsetH, 18, 18);
+          } else if () {
+            imageObj.src = '../images/twitch/kappa.png';
+            ctx.drawImage(imageObj, i * (spacing + width + widthMultiplier) - 2,  -spectrum[i] * h * heightMultiplier + h - emoteOffsetH, 18, 18);
+          } else {
+            imageObj.src = imageObj.src;
+            ctx.drawImage(imageObj, i * (spacing + width + widthMultiplier) - 2,  -spectrum[i] * h * heightMultiplier + h - emoteOffsetH, 18, 18);
+          }
+        }
+
+        // BTTV Mode
+        if($('input[name="settings-bttv"]').prop('checked')) {
+
+
+          if () {
+            // imageObj.src = '../images/BTTV/';
+            ctx.drawImage(imageObj, i * (spacing + width + widthMultiplier) - 2,  -spectrum[i] * h * heightMultiplier + h - emoteOffsetH, 18, 18);
+          } else if () {
+            // imageObj.src = '../images/BTTV/';
+            ctx.drawImage(imageObj, i * (spacing + width + widthMultiplier) - 2,  -spectrum[i] * h * heightMultiplier + h - emoteOffsetH, 18, 18);
+          } else if () {
+            // imageObj.src = '../images/BTTV/';
+            ctx.drawImage(imageObj, i * (spacing + width + widthMultiplier) - 2,  -spectrum[i] * h * heightMultiplier + h - emoteOffsetH, 18, 18);
+          } else {
+            // imageObj.src = imageObj.src;
+            ctx.drawImage(imageObj, i * (spacing + width + widthMultiplier) - 2,  -spectrum[i] * h * heightMultiplier + h - emoteOffsetH, 18, 18);
+          }
         }
       }
     });

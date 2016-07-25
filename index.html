@@ -2,16 +2,17 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>.</title>
+		<title>🎉🎉🎉</title>
 		<meta name="description" content="Visual Music + Dancing Emotes === The Dankest of Memes.">
-		<link href='http://fonts.googleapis.com/css?family=Duru+Sans' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-		<link href='css/main.css' rel='stylesheet' type='text/css'>
+		<link href='../css/main.css' rel='stylesheet' type='text/css'>
+		<link href='../css/reset.css' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
 		<div id="container">
 			<div id="info">
 				<ul>
+				<h1 class="version">v1.0</h1>
 					<!-- <li>made possible with<a target="_blank" href="https://jsantell.github.io/dancer.js/">dancer.js</a></li> -->
 				</ul>
 			</div>
@@ -39,6 +40,7 @@
 						<div class="seeker"></div>
 					</div>
 				</div>
+				<!-- instead of "choose file" button, just drag and drop. -->
 				<input style="display:none" type="file" id="song-temp" accept=".mp3"/>
 				<div id="track-container">
 					<table id="track-list"></table>
@@ -46,13 +48,13 @@
 				<div id="settings">
 					<div id="setting-options">
 						<input type="checkbox" name="settings-bars" checked="checked"> Bars
-						<input type="checkbox" name="settings-emotes" checked="unchecked"> Emotes
+						<input id="twitch" type="checkbox" name="settings-twitch" checked="checked"> Twitch
+						<input id="bttv" type="checkbox" name="settings-bttv"> BTTV
 					</div>
 					<div class="volume-container">
 						<div class="volume">
 						</div>
 					</div>
-					<div class="version">v1.0</div>
 				</div>
 			</div>
 		</div>
@@ -67,7 +69,7 @@
 		<script src="../js/lib/adapterFlash.js"></script>
 		<script src="../js/lib/fft.js"></script>
 		<script src="../js/lib/flash_detect.js"></script>
-		<!-- Helper scripts -->
+		<!-- Helper -->
 		<script src="../js/emotes.js"></script>
 		<script src="../js/player.js"></script>
 		<script src="../js/dropdown.js"></script>
