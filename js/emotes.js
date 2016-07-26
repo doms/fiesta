@@ -27,10 +27,11 @@
 
     ctx.fillStyle = options.fillStyle || "white";
 
-    var imageObj = new Image();
-    // imageObj.src = '../images/twitch/residentsleeper.png'; // start at no hype
+    var twitchImageObj = new Image();
+    twitchImageObj.src = '../images/twitch/pogchamp.png'; // PogChamp
 
-
+    var bttvImageObj = new Image();
+    bttvImageObj.src = '//cdn.betterttv.net/emote/555981336ba1901877765555/3x'; // haHAA
 
     this.bind('update', function() {
       var spectrum = this.getSpectrum();
@@ -44,43 +45,17 @@
         
         // Twitch mode
         if($('input[name="settings-twitch"]').prop('checked')) {
-
-          // TODO: we don't want the twitch & bttv emotes overlapping, so we turn off the bttv emotes when twitch mode is selected.
-
-          // TODO: find proper way to check for "kick" height
-          if () {
-            imageObj.src = '../images/twitch/pogchamp.png';
-            ctx.drawImage(imageObj, i * (spacing + width + widthMultiplier) - 2,  -spectrum[i] * h * heightMultiplier + h - emoteOffsetH, 18, 18);
-          } else if () {
-            imageObj.src = '../images/twitch/seemsgood.png';
-            ctx.drawImage(imageObj, i * (spacing + width + widthMultiplier) - 2,  -spectrum[i] * h * heightMultiplier + h - emoteOffsetH, 18, 18);
-          } else if () {
-            imageObj.src = '../images/twitch/kappa.png';
-            ctx.drawImage(imageObj, i * (spacing + width + widthMultiplier) - 2,  -spectrum[i] * h * heightMultiplier + h - emoteOffsetH, 18, 18);
-          } else {
-            imageObj.src = imageObj.src;
-            ctx.drawImage(imageObj, i * (spacing + width + widthMultiplier) - 2,  -spectrum[i] * h * heightMultiplier + h - emoteOffsetH, 18, 18);
-          }
+          ctx.drawImage(twitchImageObj, i * (spacing + width + widthMultiplier) - 2,  -spectrum[i] * h * heightMultiplier + h - emoteOffsetH, 18, 18);
         }
+
+        // TODO: show certain emotes depending on height of rectangle.
 
         // BTTV Mode
         if($('input[name="settings-bttv"]').prop('checked')) {
-
-
-          if () {
-            // imageObj.src = '../images/BTTV/';
-            ctx.drawImage(imageObj, i * (spacing + width + widthMultiplier) - 2,  -spectrum[i] * h * heightMultiplier + h - emoteOffsetH, 18, 18);
-          } else if () {
-            // imageObj.src = '../images/BTTV/';
-            ctx.drawImage(imageObj, i * (spacing + width + widthMultiplier) - 2,  -spectrum[i] * h * heightMultiplier + h - emoteOffsetH, 18, 18);
-          } else if () {
-            // imageObj.src = '../images/BTTV/';
-            ctx.drawImage(imageObj, i * (spacing + width + widthMultiplier) - 2,  -spectrum[i] * h * heightMultiplier + h - emoteOffsetH, 18, 18);
-          } else {
-            // imageObj.src = imageObj.src;
-            ctx.drawImage(imageObj, i * (spacing + width + widthMultiplier) - 2,  -spectrum[i] * h * heightMultiplier + h - emoteOffsetH, 18, 18);
-          }
+          ctx.drawImage(bttvImageObj, i * (spacing + width + widthMultiplier) - 2,  -spectrum[i] * h * heightMultiplier + h - emoteOffsetH, 18, 18);
         }
+
+        // TODO: show certain emotes depending on height of rectangle.
       }
     });
 

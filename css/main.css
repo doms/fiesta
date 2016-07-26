@@ -1,4 +1,4 @@
-@import 'https://fonts.googleapis.com/css?family=Audiowide|Lobster|Carrois+Gothic+SC|Sansita+One|Sonsie+One';
+@import 'https://fonts.googleapis.com/css?family=Audiowide|Lobster|Open+Sans: 300, 400|';
 
 body {
     font-family: 'Audiowide', arial, sans-serif;
@@ -13,9 +13,6 @@ body {
     font-family: 'Lobster', cursive;
 }
 
-div ul li {
-    font-family: "Sonsie One", cursive;
-}
 
 .seeker-container {
     position: absolute;
@@ -32,7 +29,7 @@ div ul li {
 #controls {
     width: 100%;
     height: 80px;
-    margin-top: 15px;
+    margin-top: 27px;
 }
 .float-left {
     float: left;
@@ -115,13 +112,14 @@ div ul li {
     position: absolute;
     visibility: hidden;
 }
+
 .track-playing .playing-arrow {
     visibility: visible;
+
 }
 .playing-arrow img {
     position: relative;
     right:15px;
-    background-image: url(../images/playbutton.png);
 }
 .track {
 
@@ -131,14 +129,16 @@ div ul li {
     color: grey;
 }
 #track-container {
-    font-family: 'Audiowide', arial, sans-serif;
-    font-size: 12px;
+    font-family: 'Open Sans';
+    font-size: 18px;
+    text-transform: capitalize;
     color: grey;
     max-height: 65%;
     overflow-y: auto;
     margin-top: 20px;
 }
 #track-list {
+    font-family: 'Open Sans';
     color: #ccc;
     width: 300px;
     margin: 5px auto;
