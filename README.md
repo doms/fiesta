@@ -1,5 +1,4 @@
 # 🎉🎉🎉 fiesta 🎉🎉🎉
-### Visual Audio + Emotes == Dank Memes
 
 
 
