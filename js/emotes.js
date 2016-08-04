@@ -5,7 +5,7 @@
  *
  * var dancer = new Dancer('song.ogg'),
  *     canvas = document.getElementById('fftcanvas');
- * 
+ *
  * dancer.fft(canvas, {width: 2, spacing: 1});
  */
 
@@ -31,7 +31,7 @@
     twitchImageObj.src = '../images/twitch/pogchamp.png'; // PogChamp
 
     var bttvImageObj = new Image();
-    bttvImageObj.src = '//cdn.betterttv.net/emote/555981336ba1901877765555/3x'; // haHAA
+    bttvImageObj.src = 'https://cdn.betterttv.net/emote/54fa925e01e468494b85b54d/3x'; // OhMyGoodness
 
     this.bind('update', function() {
       var spectrum = this.getSpectrum();
@@ -42,15 +42,15 @@
         if ($('input[name="settings-bars"]').prop('checked')) {
           ctx.fillRect(i * (spacing + width + widthMultiplier), h, width + 10, -spectrum[i] * h * heightMultiplier);
         }
-        
-        // Twitch mode
+
+        // Twitch mode; PogChamp, SeemsGood, Kappa, ResidentSleeper
         if($('input[name="settings-twitch"]').prop('checked')) {
           ctx.drawImage(twitchImageObj, i * (spacing + width + widthMultiplier) - 2,  -spectrum[i] * h * heightMultiplier + h - emoteOffsetH, 18, 18);
         }
 
         // TODO: show certain emotes depending on height of rectangle.
 
-        // BTTV Mode
+        // BTTV Mode; FeelsAmazingMan,
         if($('input[name="settings-bttv"]').prop('checked')) {
           ctx.drawImage(bttvImageObj, i * (spacing + width + widthMultiplier) - 2,  -spectrum[i] * h * heightMultiplier + h - emoteOffsetH, 18, 18);
         }

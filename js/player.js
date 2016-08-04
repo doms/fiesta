@@ -41,7 +41,7 @@ updateSlider = true;
     }
   });
 
-  // 
+  //
   $('.button-stop').click(function() {
     dancer.pause();
     setStatusPaused();
@@ -59,7 +59,7 @@ updateSlider = true;
 
     if(currentTrack.length) {
       nextTrack = parseInt(currentTrack.attr('data-track')) - 1;
-      
+
       if(nextTrack < 0) {
         dancer.audio.currentTime = 0;
       } else {
@@ -67,7 +67,7 @@ updateSlider = true;
         $('.track-playing').removeClass('track-playing');
         $($('#track-list tr')[nextTrack]).addClass('track-playing');
       }
-      
+
       setStatusPlaying();
     }
   })
@@ -104,10 +104,10 @@ function playTrack(track) {
 
   kick = dancer.createKick({
     onKick: function () {
-      ctx.fillStyle = '#3B87F9';
+      ctx.fillStyle = '#6441A4';
     },
     offKick: function () {
-      ctx.fillStyle = '#3B87F9';
+      ctx.fillStyle = '#6441A4';
     }
   }).on();
 
@@ -127,7 +127,7 @@ function setStatusPlaying() {
     $('body').addClass('is-playing');
   }
 
-  $('.drop-message').hide(); // hides "drag & drop" message 
+  $('.drop-message').hide(); // hides "drag & drop" message
 }
 
 function setStatusPaused() {

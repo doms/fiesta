@@ -3,26 +3,26 @@ playlistX = 0;
 
 (function() {
   $("html").on("dragover", function(event) {
-    event.preventDefault();  
+    event.preventDefault();
     event.stopPropagation();
     $(this).addClass('dragging');
   });
 
   $("html").on("dragleave", function(event) {
-      event.preventDefault();  
+      event.preventDefault();
       event.stopPropagation();
       $(this).removeClass('dragging');
   });
 
   $("html").on("drop", function(event) {
-      event.preventDefault();  
+      event.preventDefault();
       event.stopPropagation();
-      
+
       files = event.originalEvent.dataTransfer.files;
 
 	  $.each(files, function(index, obj) {
 	  	//COOKIE STORE PERSITANT PLAYLISTS?
-	  	//var reader = new FileReader(); 
+	  	//var reader = new FileReader();
 	  	//reader.onload = fileLoaded;
 	  	//reader.readAsDataURL(obj);
 
@@ -51,7 +51,7 @@ function pushPlaylist(file, meta) {
 
 	audio.addEventListener('loadedmetadata', function() {
 	  	var trackName = meta.name.replace('.mp3', '');
-	   	
+
 	   	// we don't want too long of a track name....
 	   	cutTrackName = trackName.substring(0, 25);
 
@@ -70,7 +70,7 @@ function pushPlaylist(file, meta) {
 			cutName: cutTrackName,
 			audio: audio,
 			length: trackDuration,
-			dom: $('#track-list').append($('<tr class="track" data-track="' + playlistX + '"><td class="playing-arrow"><img width="10" src="images/audio.svg" /></td><td>' + cutTrackName + '</td><td class="track-length">' + trackDuration + '</td></tr>').click(playSelectedTrack))
+			dom: $('#track-list').append($('<tr class="track" data-track="' + playlistX + '"><td class="playing-arrow"><img width="35" src="images/playbutton.png" /></td><td>' + cutTrackName + '</td><td class="track-length">' + trackDuration + '</td></tr>').click(playSelectedTrack))
 		})
 
 	    // if only one song, immediately start song, and show "track playing" information

@@ -24,7 +24,7 @@ body {
     width: 230px;
     height: 3px;
     border: none !important;
-    background: #3B87F9 !important;
+    background: #6441A4 !important;
 }
 #controls {
     width: 100%;
@@ -46,8 +46,8 @@ body {
     margin-left: 20px;
 }
 .button-arrow-left {
-    width: 0; 
-    height: 0; 
+    width: 0;
+    height: 0;
     border-bottom: 25px solid transparent;
     border-top: 25px solid transparent;
     border-right: 40px solid #ccc;
@@ -56,8 +56,8 @@ body {
     margin-left: 10px;
 }
 .button-arrow-right {
-    width: 0; 
-    height: 0; 
+    width: 0;
+    height: 0;
     border-bottom: 25px solid transparent;
     border-top: 25px solid transparent;
     border-left: 40px solid #ccc;
@@ -66,8 +66,8 @@ body {
     margin-right: 10px;
 }
 .button-play {
-    width: 0; 
-    height: 0; 
+    width: 0;
+    height: 0;
     border-bottom: 25px solid transparent;
     border-top: 25px solid transparent;
     border-left: 50px solid #ccc;
@@ -88,10 +88,10 @@ body {
     top: 8px;
 }
 .is-playing .button-play {
-    border-left: 50px solid #3B87F9;
+    border-left: 50px solid #6441A4;
 }
 .button-stop {
-    width: 50px; 
+    width: 50px;
     height: 50px;
 }
 .is-playing .button-stop .button-line {
@@ -99,7 +99,7 @@ body {
 }
 .button-stop .button-line {
     width: 16px;
-    background-color: #3B87F9;
+    background-color: #6441A4;
 }
 .button-line {
     width: 8px;
@@ -109,24 +109,26 @@ body {
 }
 
 .playing-arrow {
-    position: absolute;
+    position: relative;
     visibility: hidden;
 }
 
 .track-playing .playing-arrow {
     visibility: visible;
+    padding-left: 8%;
 
 }
 .playing-arrow img {
     position: relative;
-    right:15px;
 }
+
 .track {
+    padding-left: 50px;
 
 }
 .track-length {
     text-align: right;
-    color: grey;
+    color: white;
 }
 #track-container {
     font-family: 'Open Sans';
@@ -142,7 +144,7 @@ body {
     color: #ccc;
     width: 300px;
     margin: 5px auto;
-    font-size: 20px;
+    font-size: 14px;
     text-shadow: 0 0 3px black;
     color: white;
     font-weight: bold;
@@ -163,7 +165,7 @@ body {
     height: 3px;
     position: absolute;
     border: none !important;
-    background: #3B87F9 !important;
+    background: #6441A4 !important;
     left: 195px;
     bottom: 8px;
 }
@@ -190,7 +192,7 @@ body {
     right: 200px;
     bottom: 0px;
 }
-#fft { 
+#fft {
     display: block;
     margin: 0 auto;
     position: absolute;
@@ -212,13 +214,33 @@ body {
 }
 .version {
     font-family: 'Lobster', cursive;
-    color: grey;
+    color: white;
     font-size: 2em;
     float: right;
     position: absolute;
     right: 17px;
     bottom: -1px;
     color: #ccc;
+}
+
+.random {
+    font-family: 'Lobster', cursive;
+    color: white;
+    font-size: 1em;
+    float: right;
+    position: absolute;
+    right: 90%;
+    bottom: -1px;
+    color: #ccc;
+}
+
+h1 span {
+    font-size: 100%;
+    font-style: inherit;
+}
+
+a span {
+    color: #5882FA;
 }
 #select-track {
     color: #6441A5;
@@ -237,8 +259,8 @@ body {
     left: 70%;
 }
 #settings {
-    font-family: "Audiowide";
-    color: #69A5FF;
+    font-family: "Open Sans", sans-serif;
+    color: #886AC1;
     position: absolute;
     bottom: 65px;
     margin-left: 10px;
@@ -249,8 +271,8 @@ body {
 }
 #info {
     font-family: 'Audiowide', arial, sans-serif;
-    padding-left: 10px;
-    width: 6%; /* 75% */
+    width: 98%;
+    padding-right: 5px;
     position: fixed;
     top: 0;
     height: 52px;
@@ -259,9 +281,9 @@ body {
     z-index: 999999;
 }
 #info h1 {
-    margin: 6px 0px 0px -2px;
-    float: left;
-    font-size: 35px;
+    margin: 6px auto;
+    font-size: 25px;
+    padding-top: 15%;
     color: white;
 }
 #info h2 {
