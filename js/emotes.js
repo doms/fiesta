@@ -31,7 +31,7 @@
     twitchImageObj.src = '../images/twitch/pogchamp.png'; // PogChamp
 
     var bttvImageObj = new Image();
-    bttvImageObj.src = 'https://cdn.betterttv.net/emote/54fa925e01e468494b85b54d/3x'; // OhMyGoodness
+    bttvImageObj.src = '../images/BTTV/LUL.png'; // OhMyGoodness
 
     this.bind('update', function() {
       var spectrum = this.getSpectrum();
