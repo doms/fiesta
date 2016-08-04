@@ -28,10 +28,10 @@
     ctx.fillStyle = options.fillStyle || "white";
 
     var twitchImageObj = new Image();
-    twitchImageObj.src = '../images/twitch/pogchamp.png'; // PogChamp
+    twitchImageObj.src = '../images/twitch/pogchamp.png';
 
     var bttvImageObj = new Image();
-    bttvImageObj.src = '../images/BTTV/LUL.png'; // OhMyGoodness
+    bttvImageObj.src = '../images/BTTV/LUL.png';
 
     this.bind('update', function() {
       var spectrum = this.getSpectrum();
