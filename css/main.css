@@ -1,4 +1,13 @@
 @import 'https://fonts.googleapis.com/css?family=Audiowide|Lobster|Open+Sans: 300, 400|';
+@font-face {
+    font-family: 'League Gothic';
+    src: url('../css/League_Gothic-webfont.eot');
+    src: url('../css/League_Gothic-webfont.eot?') format('embedded-opentype'),
+    url('../css/League_Gothic-webfont.woff') format('woff'),
+    url('../css/League_Gothic-webfont.ttf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
 
 body {
     font-family: 'Audiowide', arial, sans-serif;
@@ -131,7 +140,7 @@ body {
     color: white;
 }
 #track-container {
-    font-family: 'Open Sans';
+    font-family: 'League Gothic', sans-serif;
     font-size: 18px;
     text-transform: capitalize;
     color: grey;
@@ -140,17 +149,21 @@ body {
     margin-top: 20px;
 }
 #track-list {
-    font-family: 'Open Sans';
+    font-family: 'League Gothic', sans-serif;
     color: #ccc;
     width: 300px;
     margin: 5px auto;
-    font-size: 14px;
+    font-size: 20px;
     text-shadow: 0 0 3px black;
     color: white;
     font-weight: bold;
 }
 #track-list tr {
     cursor: pointer;
+}
+
+td .playing-arrow {
+    padding-bottom: 0px;
 }
 .seeker .ui-slider-handle {
     height: 8px;
@@ -213,7 +226,7 @@ body {
     width: 255px;
 }
 .version {
-    font-family: 'Lobster', cursive;
+    font-family: 'League Gothic', cursive;
     color: white;
     font-size: 2em;
     float: right;
@@ -259,7 +272,7 @@ a span {
     left: 70%;
 }
 #settings {
-    font-family: "Open Sans", sans-serif;
+    font-family: 'Open Sans', sans-serif;
     color: #886AC1;
     position: absolute;
     bottom: 65px;
@@ -270,7 +283,7 @@ a span {
     font-size: 12px;
 }
 #info {
-    font-family: 'Audiowide', arial, sans-serif;
+    font-family: 'League Gothic', arial, sans-serif;
     width: 98%;
     padding-right: 5px;
     position: fixed;
