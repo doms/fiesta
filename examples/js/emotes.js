@@ -26,12 +26,38 @@
       doUpdateAt = 0;
 
     ctx.fillStyle = options.fillStyle || "white";
+// ---------------------------------------------------------------------
+    /* Random Emotes Testing */
+
+    // Twitch Emotes
+    var PogChamp = '../images/twitch/pogchamp.png',
+        Kappa = '../images/twitch/kappa.png',
+        ResidentSleeper = '../images/twitch/residentsleeper.png',
+        SeemsGood = '../images/twitch/seemsgood.png';
+
+    // BTTV Emotes
+    var BlacKappa = '../images/BTTV/Blackappa.png',
+        FeelsAmazingMan = '../images/BTTV/FeelsAmazingMan.png',
+        LUL = '../images/BTTV/LUL.png',
+        VisLaud = '../images/BTTV/VisLaud.png';
+
+
+    var twitchEmotes = [PogChamp, Kappa, ResidentSleeper, SeemsGood];
+    var bttvEmotes = [BlacKappa, FeelsAmazingMan, LUL, VisLaud];
+
+// ---------------------------------------------------------------------
 
     var twitchImageObj = new Image();
-    twitchImageObj.src = '../images/twitch/pogchamp.png';
+    // twitchImageObj.src = '../images/twitch/pogchamp.png';
+    twitchImageObj.src = twitchEmotes[Math.floor(Math.random * twitchEmotes.length)];
+    console.log(twitchImageObj.src);
 
     var bttvImageObj = new Image();
-    bttvImageObj.src = '../images/BTTV/LUL.png';
+    // bttvImageObj.src = '../images/BTTV/LUL.png';
+    bttvImageObj = [Math.floor(Math.random * twitchEmotes.length)];
+    console.log(bttvImageObj.src);
+
+
 
     this.bind('update', function() {
       var spectrum = this.getSpectrum();
