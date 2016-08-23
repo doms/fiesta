@@ -50,7 +50,7 @@
 
         // TODO: show certain emotes depending on height of rectangle.
 
-        // BTTV Mode; FeelsAmazingMan,
+        // BTTV Mode; FeelsAmazingMan, Blackappa, LUL, VisLaud
         if($('input[name="settings-bttv"]').prop('checked')) {
           ctx.drawImage(bttvImageObj, i * (spacing + width + widthMultiplier) - 2,  -spectrum[i] * h * heightMultiplier + h - emoteOffsetH, 18, 18);
         }
