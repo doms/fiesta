@@ -48,14 +48,13 @@
 // ---------------------------------------------------------------------
 
     var twitchImageObj = new Image();
-    // twitchImageObj.src = '../images/twitch/pogchamp.png';
-    twitchImageObj.src = twitchEmotes[Math.floor(Math.random() * twitchEmotes.length)];
-    console.log(twitchImageObj.src);
+    twitchImageObj.src = '../images/twitch/pogchamp.png';
+    // twitchImageObj.src = twitchEmotes[Math.floor(Math.random() * twitchEmotes.length)];
+
 
     var bttvImageObj = new Image();
-    // bttvImageObj.src = '../images/BTTV/LUL.png';
-    bttvImageObj.src = bttvEmotes[Math.floor(Math.random() * bttvEmotes.length)];
-    console.log(bttvImageObj.src);
+    bttvImageObj.src = '../images/BTTV/VisLaud.png';
+    // bttvImageObj.src = bttvEmotes[Math.floor(Math.random() * bttvEmotes.length)];
 
 
 
@@ -82,7 +81,16 @@
         }
 
         // TODO: show certain emotes depending on height of rectangle.
+
+        if($('input[name="settings-fiesta"]').prop('checked')) {
+          ctx.drawImage(bttvImageObj, i * (spacing + width + widthMultiplier) - 2,  -spectrum[i] * h * heightMultiplier + h - emoteOffsetH, 18, 18);
+          ctx.drawImage(twitchImageObj, i * (spacing + width + widthMultiplier) - 2,  -spectrum[i] * h * heightMultiplier + h - emoteOffsetH, 18, 18);
+
+          twitchImageObj.src = twitchEmotes[Math.floor(Math.random() * twitchEmotes.length)];
+          bttvImageObj.src = bttvEmotes[Math.floor(Math.random() * bttvEmotes.length)];
+        }
       }
+
     });
 
     return this;
