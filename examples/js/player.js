@@ -102,12 +102,23 @@ function playTrack(track) {
   dancer = null;
   dancer = new Dancer();
 
+  // colors for "fiesta mode"
+  var colors = ['#6441A5', '#1A8BF0', '#7289DA', '#9B0A0A'];
+
   kick = dancer.createKick({
     onKick: function () {
-      ctx.fillStyle = '#6441A4';
+      if ($('input[name="settings-fiesta"]').prop('checked')) {
+        ctx.fillStyle = colors[Math.floor(Math.random() * colors.length)];
+      } else {
+        ctx.fillStyle = '#6441A4';
+      }
     },
     offKick: function () {
-      ctx.fillStyle = '#6441A4';
+      if ($('input[name="settings-fiesta"]').prop('checked')) {
+        ctx.fillStyle = colors[Math.floor(Math.random() * colors.length)];
+      } else {
+        ctx.fillStyle = '#6441A4';
+      }
     }
   }).on();
 

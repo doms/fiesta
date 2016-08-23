@@ -83,10 +83,10 @@
         // TODO: show certain emotes depending on height of rectangle.
 
         if($('input[name="settings-fiesta"]').prop('checked')) {
-          ctx.drawImage(bttvImageObj, i * (spacing + width + widthMultiplier) - 2,  -spectrum[i] * h * heightMultiplier + h - emoteOffsetH, 18, 18);
           ctx.drawImage(twitchImageObj, i * (spacing + width + widthMultiplier) - 2,  -spectrum[i] * h * heightMultiplier + h - emoteOffsetH, 18, 18);
-
           twitchImageObj.src = twitchEmotes[Math.floor(Math.random() * twitchEmotes.length)];
+
+          ctx.drawImage(bttvImageObj, i * (spacing + width + widthMultiplier) - 2,  -spectrum[i] * h * heightMultiplier + h - emoteOffsetH, 18, 18);
           bttvImageObj.src = bttvEmotes[Math.floor(Math.random() * bttvEmotes.length)];
         }
       }
