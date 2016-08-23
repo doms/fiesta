@@ -49,12 +49,12 @@
 
     var twitchImageObj = new Image();
     // twitchImageObj.src = '../images/twitch/pogchamp.png';
-    twitchImageObj.src = twitchEmotes[Math.floor(Math.random * twitchEmotes.length)];
+    twitchImageObj.src = twitchEmotes[Math.floor(Math.random() * twitchEmotes.length)];
     console.log(twitchImageObj.src);
 
     var bttvImageObj = new Image();
     // bttvImageObj.src = '../images/BTTV/LUL.png';
-    bttvImageObj = [Math.floor(Math.random * twitchEmotes.length)];
+    bttvImageObj.src = bttvEmotes[Math.floor(Math.random() * bttvEmotes.length)];
     console.log(bttvImageObj.src);
 
 
