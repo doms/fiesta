@@ -103,7 +103,8 @@ function playTrack(track) {
   dancer = new Dancer();
 
   // colors for "fiesta mode"
-  var colors = ['#6441A5', '#1A8BF0', '#7289DA', '#9B0A0A'];
+  var colors = ['#6441A5', '#1A8BF0', '#7289DA', '#9B0A0A', '#F4FA58',
+                '#00FFFF', '#FFFFFF', '#0000FF', '#00FF00', '#FE2EF7'];
 
   kick = dancer.createKick({
     onKick: function () {

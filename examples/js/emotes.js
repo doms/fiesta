@@ -44,6 +44,7 @@
 
     var twitchEmotes = [PogChamp, Kappa, ResidentSleeper, SeemsGood];
     var bttvEmotes = [BlacKappa, FeelsAmazingMan, LUL, VisLaud];
+    var fiesta = [PogChamp, Kappa, ResidentSleeper, SeemsGood, BlacKappa, FeelsAmazingMan, LUL, VisLaud];
 
 // ---------------------------------------------------------------------
 
