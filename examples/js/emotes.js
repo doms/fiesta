@@ -85,10 +85,7 @@
 
         if($('input[name="settings-fiesta"]').prop('checked')) {
           ctx.drawImage(twitchImageObj, i * (spacing + width + widthMultiplier) - 2,  -spectrum[i] * h * heightMultiplier + h - emoteOffsetH, 18, 18);
-          twitchImageObj.src = twitchEmotes[Math.floor(Math.random() * twitchEmotes.length)];
-
-          ctx.drawImage(bttvImageObj, i * (spacing + width + widthMultiplier) - 2,  -spectrum[i] * h * heightMultiplier + h - emoteOffsetH, 18, 18);
-          bttvImageObj.src = bttvEmotes[Math.floor(Math.random() * bttvEmotes.length)];
+          twitchImageObj.src = fiesta[Math.floor(Math.random() * fiesta.length)];
         }
       }
 
