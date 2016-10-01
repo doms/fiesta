@@ -30,16 +30,16 @@
     /* Random Emotes Testing */
 
     // Twitch Emotes
-    var PogChamp = '../images/twitch/pogchamp.png',
-        Kappa = '../images/twitch/kappa.png',
-        ResidentSleeper = '../images/twitch/residentsleeper.png',
-        SeemsGood = '../images/twitch/seemsgood.png';
+    var PogChamp = '../img/twitch/pogchamp.png',
+        Kappa = '../img/twitch/kappa.png',
+        ResidentSleeper = '../img/twitch/residentsleeper.png',
+        SeemsGood = '../img/twitch/seemsgood.png';
 
     // BTTV Emotes
-    var BlacKappa = '../images/BTTV/Blackappa.png',
-        FeelsAmazingMan = '../images/BTTV/FeelsAmazingMan.png',
-        LUL = '../images/BTTV/LUL.png',
-        VisLaud = '../images/BTTV/VisLaud.png';
+    var BlacKappa = '../img/BTTV/Blackappa.png',
+        FeelsAmazingMan = '../img/BTTV/FeelsAmazingMan.png',
+        LUL = '../img/BTTV/LUL.png',
+        VisLaud = '../img/BTTV/VisLaud.png';
 
 
     var twitchEmotes = [PogChamp, Kappa, ResidentSleeper, SeemsGood];
@@ -49,14 +49,15 @@
 // ---------------------------------------------------------------------
 
     var twitchImageObj = new Image();
-    twitchImageObj.src = '../images/twitch/pogchamp.png';
+    twitchImageObj.src = '../img/twitch/pogchamp.png';
     // twitchImageObj.src = twitchEmotes[Math.floor(Math.random() * twitchEmotes.length)];
 
 
     var bttvImageObj = new Image();
-    bttvImageObj.src = '../images/BTTV/VisLaud.png';
+    bttvImageObj.src = '../img/BTTV/VisLaud.png';
     // bttvImageObj.src = bttvEmotes[Math.floor(Math.random() * bttvEmotes.length)];
 
+    var fiestaImageObj = new Image();
 
 
     this.bind('update', function() {
@@ -76,7 +77,6 @@
 
         // TODO: show certain emotes depending on height of rectangle.
 
-        // BTTV Mode; FeelsAmazingMan, Blackappa, LUL, VisLaud
         if($('input[name="settings-bttv"]').prop('checked')) {
           ctx.drawImage(bttvImageObj, i * (spacing + width + widthMultiplier) - 2,  -spectrum[i] * h * heightMultiplier + h - emoteOffsetH, 18, 18);
         }

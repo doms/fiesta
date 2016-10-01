@@ -192,7 +192,7 @@ td .playing-arrow {
 }
 #render {
     background-color: #000;
-    background-image: url('../images/GlitchIcon_white.png');
+    background-image: url('../img/GlitchIcon_white.png');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 200px 200px;

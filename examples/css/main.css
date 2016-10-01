@@ -179,7 +179,7 @@ td .playing-arrow {
     position: absolute;
     border: none !important;
     background: #6441A4 !important;
-    left: 195px;
+    left: 210px;
     bottom: 8px;
 }
 .volume .ui-slider-handle {
@@ -192,12 +192,12 @@ td .playing-arrow {
 }
 #render {
     background-color: #000;
-    background-image: url('../images/GlitchIcon_white.png');
+    background-image: url('../img/d-transparent.png');
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: 200px 200px;
+    background-size: 550px 400px;
     width: 100%;
-    height: 100%;
+    height: 110%;
     display: block;
     margin: 0 auto;
     position: absolute;
@@ -260,7 +260,7 @@ a span {
 }
 #playlist {
     background: #000;
-    width: 350px;
+    width: 380px;
     height: 100%;
     top: 53px;
     position: fixed;
