@@ -111,14 +111,14 @@ function playTrack(track) {
       if ($('input[name="settings-fiesta"]').prop('checked')) {
         ctx.fillStyle = colors[Math.floor(Math.random() * colors.length)];
       } else {
-        ctx.fillStyle = '#6441A4';
+        ctx.fillStyle = '#1A8BF0';
       }
     },
     offKick: function () {
       if ($('input[name="settings-fiesta"]').prop('checked')) {
         ctx.fillStyle = colors[Math.floor(Math.random() * colors.length)];
       } else {
-        ctx.fillStyle = '#6441A4';
+        ctx.fillStyle = '#1A8BF0';
       }
     }
   }).on();

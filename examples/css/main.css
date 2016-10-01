@@ -33,7 +33,7 @@ body {
     width: 230px;
     height: 3px;
     border: none !important;
-    background: #6441A4 !important;
+    background: #1A8BF0 !important;
 }
 #controls {
     width: 100%;
@@ -97,7 +97,7 @@ body {
     top: 8px;
 }
 .is-playing .button-play {
-    border-left: 50px solid #6441A4;
+    border-left: 50px solid #1A8BF0;
 }
 .button-stop {
     width: 50px;
@@ -108,7 +108,7 @@ body {
 }
 .button-stop .button-line {
     width: 16px;
-    background-color: #6441A4;
+    background-color: #1A8BF0;
 }
 .button-line {
     width: 8px;
@@ -178,7 +178,7 @@ td .playing-arrow {
     height: 3px;
     position: absolute;
     border: none !important;
-    background: #6441A4 !important;
+    background: #1A8BF0 !important;
     left: 210px;
     bottom: 8px;
 }
@@ -230,7 +230,8 @@ td .playing-arrow {
     color: white;
     font-size: 2em;
     float: right;
-    position: absolute;
+    position: relative;
+    z-index: -1;
     right: 17px;
     bottom: -1px;
     color: #ccc;
@@ -256,7 +257,7 @@ a span {
     color: #5882FA;
 }
 #select-track {
-    color: #6441A5;
+    color: #1A8BF0;
 }
 #playlist {
     background: #000;
@@ -265,7 +266,7 @@ a span {
     top: 53px;
     position: fixed;
     right: 0px;
-    color: #6441A5;
+    color: #1A8BF0;
 }
 
 #settings-options {
@@ -273,7 +274,7 @@ a span {
 }
 #settings {
     font-family: 'Open Sans', sans-serif;
-    color: #886AC1;
+    color: #1A8BF0;
     position: absolute;
     bottom: 65px;
     margin-left: 10px;
@@ -284,7 +285,7 @@ a span {
 }
 #info {
     font-family: 'League Gothic', arial, sans-serif;
-    width: 98%;
+    width: 100%;
     padding-right: 5px;
     position: fixed;
     top: 0;
