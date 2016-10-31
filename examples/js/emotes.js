@@ -70,19 +70,16 @@
           ctx.fillRect(i * (spacing + width + widthMultiplier), h, width + 10, -spectrum[i] * h * heightMultiplier);
         }
 
-        // Twitch mode; PogChamp, SeemsGood, Kappa, ResidentSleeper
         if($('input[name="settings-twitch"]').prop('checked')) {
           ctx.drawImage(twitchImageObj, i * (spacing + width + widthMultiplier) - 2,  -spectrum[i] * h * heightMultiplier + h - emoteOffsetH, 18, 18);
         }
 
         // TODO: show certain emotes depending on height of rectangle.
-
         if($('input[name="settings-bttv"]').prop('checked')) {
           ctx.drawImage(bttvImageObj, i * (spacing + width + widthMultiplier) - 2,  -spectrum[i] * h * heightMultiplier + h - emoteOffsetH, 18, 18);
         }
 
         // TODO: show certain emotes depending on height of rectangle.
-
         if($('input[name="settings-fiesta"]').prop('checked')) {
           ctx.drawImage(fiestaImageObj, i * (spacing + width + widthMultiplier) - 2,  -spectrum[i] * h * heightMultiplier + h - emoteOffsetH, 18, 18);
           fiestaImageObj.src = fiesta[Math.floor(Math.random() * fiesta.length)];
