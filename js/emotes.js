@@ -56,12 +56,12 @@
           ctx.fillRect(i * (spacing + width + widthMultiplier), h, width + 10, -spectrum[i] * h * heightMultiplier);
         }
 
-        if($('input[name="settings-twitch"]').prop('checked')) {
+        if ($('input[name="settings-twitch"]').prop('checked')) {
           ctx.drawImage(emotesObj, i * (spacing + width + widthMultiplier) - 2,  -spectrum[i] * h * heightMultiplier + h - emoteOffsetH, 18, 18);
         }
 
         // TODO: show certain emotes depending on height of rectangle.
-        if($('input[name="settings-fiesta"]').prop('checked')) {
+        if ($('input[name="settings-fiesta"]').prop('checked')) {
           ctx.drawImage(fiestaObj, i * (spacing + width + widthMultiplier) - 2,  -spectrum[i] * h * heightMultiplier + h - emoteOffsetH, 18, 18);
           fiestaObj.src = emotes[Math.floor(Math.random() * emotes.length)];
         }
