@@ -36,10 +36,10 @@
         SeemsGood = '../img/twitch/seemsgood.png';
 
     // BTTV Emotes
-    var BlacKappa = '../img/BTTV/Blackappa.png',
-        FeelsAmazingMan = '../img/BTTV/FeelsAmazingMan.png',
-        LUL = '../img/BTTV/LUL.png',
-        VisLaud = '../img/BTTV/VisLaud.png';
+    var BlacKappa = '../img/bttv/Blackappa.png',
+        FeelsAmazingMan = '../img/bttv/FeelsAmazingMan.png',
+        LUL = '../img/bttv/LUL.png',
+        VisLaud = '../img/bttv/VisLaud.png';
 
 
     var twitchEmotes = [PogChamp, Kappa, ResidentSleeper, SeemsGood];
