@@ -30,16 +30,16 @@
     /* Random Emotes Testing */
 
     // Twitch Emotes
-    var PogChamp = '../img/twitch/pogchamp.png',
-        Kappa = '../img/twitch/kappa.png',
-        ResidentSleeper = '../img/twitch/residentsleeper.png',
-        SeemsGood = '../img/twitch/seemsgood.png';
+    var PogChamp = '/img/twitch/pogchamp.png',
+        Kappa = '/img/twitch/kappa.png',
+        ResidentSleeper = '/img/twitch/residentsleeper.png',
+        SeemsGood = '/img/twitch/seemsgood.png';
 
     // BTTV Emotes
-    var BlacKappa = '../img/bttv/Blackappa.png',
-        FeelsAmazingMan = '../img/bttv/FeelsAmazingMan.png',
-        LUL = '../img/bttv/LUL.png',
-        VisLaud = '../img/bttv/VisLaud.png';
+    var BlacKappa = '/img/bttv/Blackappa.png',
+        FeelsAmazingMan = '/img/bttv/FeelsAmazingMan.png',
+        LUL = '/img/bttv/LUL.png',
+        VisLaud = '/img/bttv/VisLaud.png';
 
 
     var twitchEmotes = [PogChamp, Kappa, ResidentSleeper, SeemsGood];
