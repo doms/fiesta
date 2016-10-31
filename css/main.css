@@ -174,12 +174,12 @@ td .playing-arrow {
     outline: none;
 }
 .volume {
-    width: 140px;
+    width: 180px;
     height: 3px;
     position: absolute;
     border: none !important;
     background: #1A8BF0 !important;
-    left: 210px;
+    left: 165px;
     bottom: 8px;
 }
 .volume .ui-slider-handle {
