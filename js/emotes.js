@@ -57,7 +57,7 @@
         }
 
         if($('input[name="settings-twitch"]').prop('checked')) {
-          ctx.drawImage(emotes, i * (spacing + width + widthMultiplier) - 2,  -spectrum[i] * h * heightMultiplier + h - emoteOffsetH, 18, 18);
+          ctx.drawImage(emotesObj, i * (spacing + width + widthMultiplier) - 2,  -spectrum[i] * h * heightMultiplier + h - emoteOffsetH, 18, 18);
         }
 
         // TODO: show certain emotes depending on height of rectangle.
