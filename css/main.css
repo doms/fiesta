@@ -174,7 +174,7 @@ td .playing-arrow {
     outline: none;
 }
 .volume {
-    width: 180px;
+    width: 140px;
     height: 3px;
     position: absolute;
     border: none !important;
@@ -261,7 +261,7 @@ a span {
 }
 #playlist {
     background: #000;
-    width: 380px;
+    width: 350px;
     height: 100%;
     top: 53px;
     position: fixed;

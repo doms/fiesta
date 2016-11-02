@@ -30,9 +30,9 @@
     /* Random Emotes Testing */
 
     // Twitch Emotes
-    var feelsamazingman = '../img/emotes/feelsamazingman.png',
-        hahaa           = '../img/emotes/hahaa.png',
-        kappa           = '../img/emotes/kappa.png';
+    var feelsamazingman = 'img/feelsamazingman.png',
+        hahaa           = 'img/hahaa.png',
+        kappa           = 'img/kappa.png';
 
     var emotes = [feelsamazingman, hahaa, kappa];
 // ---------------------------------------------------------------------
@@ -54,7 +54,7 @@
           ctx.fillRect(i * (spacing + width + widthMultiplier), h, width + 10, -spectrum[i] * h * heightMultiplier);
         }
 
-        if ($('input[name="settings-twitch"]').prop('checked')) {
+        if ($('input[name="settings-emotes"]').prop('checked')) {
           ctx.drawImage(emotesObj, i * (spacing + width + widthMultiplier) - 2,  -spectrum[i] * h * heightMultiplier + h - emoteOffsetH, 18, 18);
         }
 
