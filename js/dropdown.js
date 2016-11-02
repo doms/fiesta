@@ -70,7 +70,7 @@ function pushPlaylist(file, meta) {
 			cutName: cutTrackName,
 			audio: audio,
 			length: trackDuration,
-			dom: $('#track-list').append($('<tr class="track" data-track="' + playlistX + '"><td class="playing-arrow"><img width="15" src="../img/bars.svg" /></td><td>' + cutTrackName + '</td><td class="track-length">' + trackDuration + '</td></tr>').click(playSelectedTrack))
+			dom: $('#track-list').append($('<tr class="track" data-track="' + playlistX + '"><td class="playing-arrow"><img width="15" src="img/bars.svg" /></td><td>' + cutTrackName + '</td><td class="track-length">' + trackDuration + '</td></tr>').click(playSelectedTrack))
 		})
 
 	    // if only one song, immediately start song, and show "track playing" information
