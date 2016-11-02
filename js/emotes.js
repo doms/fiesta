@@ -30,19 +30,15 @@
     /* Random Emotes Testing */
 
     // Twitch Emotes
-    var PogChamp = '../img/twitch/pogchamp.png',
-        Kappa = '../img/twitch/kappa.png',
-        FeelsAmazingMan = '../img/twitch/FeelsAmazingMan.png',
-        SeemsGood = '../img/twitch/seemsgood.png',
-        hahaa = '../img/twitch/hahaa.png';
+    var feelsamazingman = '../img/emotes/feelsamazingman.png',
+        hahaa           = '../img/emotes/hahaa.png',
+        kappa           = '../img/emotes/kappa.png';
 
-    var emotes = [PogChamp, Kappa, ResidentSleeper, SeemsGood];
-
+    var emotes = [feelsamazingman, hahaa, kappa];
 // ---------------------------------------------------------------------
 
     var emotesObj = new Image();
-    // emotesObj.src = emotes[Math.floor(Math.random() * emotes.length)];
-    emotesObj.src = '/img/twitch/hahaa.png';
+    emotesObj.src = emotes[Math.floor(Math.random() * emotes.length)];
 
     var fiestaObj = new Image();
     fiestaObj.src = emotes[Math.floor(Math.random() * emotes.length)];
